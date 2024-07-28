@@ -1,0 +1,76 @@
+/* HomeStyle.css */
+
+.home-wrapper {
+    margin-top: 7%;
+    position: relative; /* Asigură că elementele din acest div sunt poziționate relativ */
+    z-index: 1; /* Conținutul din acest div va fi deasupra fundalului animat */
+    padding: 5%; 
+    color: var(--text-Color);
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+  }
+  
+  .home-content {
+    max-width: 400px; /* Limitează lățimea conținutului pentru o mai bună lizibilitate */
+    text-align: center; /* Aliniază textul la stânga */
+    margin-left: 5%;
+  }
+  
+  .home-content h2,
+  .home-content h1,
+  .home-content h3 {
+    margin: 0 0 10px 0; /* Margină între titluri */
+  }
+  .right-section {
+    display: flex;
+    flex-direction: column; /* Aliniază elementele pe verticală */
+    align-items: center; /* Centrează elementele orizontal */
+  }
+  .home-content p {
+    margin: 0 0 20px 0; /* Margină sub paragraf */
+    line-height: 1.6; /* Îmbunătățește lizibilitatea textului */
+  }
+  
+  .social-media {
+    display: flex;
+    gap: 15px; /* Spațiu între iconițe */
+    margin: 20px 0; /* Margină în jurul iconițelor social media */
+  }
+  
+  .social-media a {
+    justify-content: center;
+    color: var(--text-color-navbar);
+    font-size: 24px; 
+    transition: color 0.3s; /* Tranziție lină la hover */
+  }
+  
+  .social-media a:hover {
+    color: #ddd; /* Culoare mai deschisă la hover */
+  }
+  
+  .cv-button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Fundal albastru pentru butonul CV */
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Colțuri rotunjite */
+    cursor: pointer; /* Cursor pointer pe hover */
+    transition: background-color 0.3s; /* Tranziție lină la hover */
+  }
+  
+  .cv-button:hover {
+    background-color: #0056b3; /* Albastru mai închis la hover */
+  }
+  
+  .home-img {
+    margin-left: 20px; /* Margină stânga pentru imagine */
+  }
+  
+  .home-img img {
+    width: 350px; /* Dimensiunea imaginii */
+    height: 350px; /* Dimensiunea imaginii */
+    border-radius: 50%;  
+    object-fit: cover; /* Asigură că imaginea este decupată pentru a umple containerul */
+  }
+  

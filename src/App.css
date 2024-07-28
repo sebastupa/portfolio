@@ -1,108 +1,67 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
 :root {
-    --background-color: #fff;
-    --btn-color: #0987f2;
-    --btn-text-color: #fff;
-    --project-card-bg: #ffffff00;
-    --text-color: #222;
-    --form-text-color: #555;
-    --footer-text-color: #888;
-  }
-  
-  [data-theme='dark'] {
-    --background-color: #222;
-    --btn-color: #fff;
-    --btn-text-color: #222;
-    --project-card-bg: #fff;
-    --text-color: #fff;
-    --form-text-color: #fff;
-    --footer-text-color: #bbb;
-  }
-  
-  body {
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    margin: 0 auto 60px;
-  }
-  
-  #root {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-  }
-  
-  h1,
-  h2,
-  h3,
-  p {
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-  }
-  
-  h2,
-  h3,
-  p {
-    font-family: 'Roboto Mono', monospace;
-  }
-  
-  h1,
-  h2 {
-    text-transform: uppercase;
-  }
-  
-  h2,
-  h3 {
-    font-size: 20px;
-  }
-  
-  h1 {
-    font-family: 'Rubik', sans-serif;
-    font-size: 32px;
-  }
-  
-  p {
-    font-size: 16px;
-    font-weight: 300;
-  }
-  
-  .sectionTitle {
-    margin-bottom: 30px;
-  }
-  
-  .hover {
-    cursor: pointer;
-  }
-  
-  @media (width >= 800px) {
-    #root {
-      gap: 100px;
-    }
-    h1 {
-      font-size: 40px;
-    }
-    h2,
-    h3 {
-      font-size: 24px;
-    }
-    p {
-      font-size: 20px;
-    }
-  
-    .sectionTitle {
-      margin-bottom: 60px;
-    }
-  
-    @media (width >= 1400px) {
-      #root {
-        gap: 200px;
-      }
-      h1 {
-        font-size: 48px;
-      }
-  
-      .sectionTitle {
-        margin-bottom: 75px;
-      }
-    }
-  }
+  --background-color-light-1: #f5f6f7;
+  --background-color-light-2: #ffcce6;
+  --background-color-light-3: #fad0c4;
+  --background-color-light-4: #c9b2c1;
+  --background-color-navbar: rgb(255, 255, 255);
+  --background-color: #F1E6F4;
+  --btn-color: #0987f2;
+  --project-card-bg: #ffffff00;
+  --text-Color: #270A2E;
+  --text-color-navbar: #8E549D;
+  --form-text-color: #030303;
+  --footer-text-color: #888;
+}
+
+[data-theme='dark'] {
+  --background-color-dark-1: #3B0847;
+  --background-color-dark-2: #4D145C;
+  --background-color-dark-3: #190D1C;
+  --background-color-dark-4: #4D145C;
+  --background-color-navbar:#290133;
+  --background-color: #290133;
+  --btn-color: #2E236C;
+  --project-card-bg: #C8ACD6;
+  --text-Color: #F1E6F4;
+  --text-color-navbar: #B283BE;
+  --form-text-color: #C8ACD6;
+  --footer-text-color: #C8ACD6;
+}
+
+
+/* App.css sau un fișier CSS global similar */
+
+/* App.css sau un fișier CSS global similar */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.animated-background {
+  position: fixed; /* Fundalul trebuie să fie fixat pe toată pagina */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Asigură-te că fundalul este sub conținutul paginii */
+  pointer-events: none; /* Asigură-te că fundalul nu interferează cu interacțiunea utilizatorului */
+}
+
+.home-wrapper {
+  position: relative; /* Asigură-te că elementele din `home-wrapper` sunt poziționate relativ la acesta */
+  z-index: 1; /* Asigură-te că conținutul se află deasupra fundalului animat */
+}
+

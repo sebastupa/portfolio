@@ -1,14 +1,18 @@
-
-import './App.css'
-import Hero from './sections/Hero/Hero'
+import React from 'react';
+import './App.css'; // Asigură-te că calea este corectă
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Test from './components/test'; // Importă componenta Test pentru fundalul animat
 
 function App() {
-
   return (
     <>
-      <Hero/>
+      <Test />
+      <Navbar />
+      <Home />
+    
     </>
-  )
+  );
 }
 
-export default App
+export default App;
