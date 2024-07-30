@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './style/BackgroundStyle.css';
 
 const getRandomPosition = () => ({
-  x: Math.random() * 200 - 100, // Interval de la -100 la 100
-  y: Math.random() * 200 - 100  // Interval de la -100 la 100
+  x: Math.random() * 200 - 100, 
+    y: Math.random() * 200 - 100  
 });
 
 const generateKeyframes = (index) => {
@@ -12,7 +12,7 @@ const generateKeyframes = (index) => {
   positions.forEach((pos, i) => {
     keyframes += `${(i * 100) / (positions.length - 1)}% { transform: translate(${pos.x}vw, ${pos.y}vh); } `;
   });
-  // Elimină transformarea finală pentru a nu readuce cercul la poziția inițială
+  
   keyframes += `${100}% { transform: translate(${positions[positions.length - 1].x}vw, ${positions[positions.length - 1].y}vh); }`;
   keyframes += '}';
   return keyframes;
@@ -37,7 +37,7 @@ const generateRandomCircles = (count, setStyles) => {
           width: `${size}px`,
           height: `${size}px`,
           background: `var(--background-color-${colorIndex})`,
-          animation: `move${i} ${Math.random() * 10 + 120}s ease-in-out infinite`,
+          animation: `move${i} ${Math.random() * 510 + 120}s ease-in-out infinite`,
         }}
       ></div>
     );
@@ -53,7 +53,7 @@ const Test = () => {
   const [styles, setStyles] = useState('');
 
   useEffect(() => {
-    setCircles(generateRandomCircles(20, setStyles)); // Limităm la 10 cercuri
+    setCircles(generateRandomCircles(50, setStyles)); // Limităm la 10 cercuri
   }, []);
 
   return (

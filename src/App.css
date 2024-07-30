@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,57 +10,53 @@
 }
 
 :root {
-  --background-color-light-1: #f5f6f7;
-  --background-color-light-2: #ffcce6;
-  --background-color-light-3: #fad0c4;
-  --background-color-light-4: #c9b2c1;
-  --background-color-navbar: rgb(255, 255, 255);
+  --background-color-1: #f5f6f7;
+  --background-color-2: #ffcce6;
+  --background-color-3: #fcb29e;
+  --background-color-4: #eba6d3;
   --background-color: #F1E6F4;
-  --btn-color: #0987f2;
-  --project-card-bg: #ffffff00;
+ 
+  --project-card-bg:hwb(287 90% 4% / 0.4);
+  --project-card-txt:rgb(81, 22, 96);
+  --project-card-shadow: 0 3px 6px rgba(81, 22, 96, 0.342);
+
   --text-Color: #270A2E;
   --text-color-navbar: #8E549D;
   --form-text-color: #030303;
   --footer-text-color: #888;
+  --background-Color-navbar:hwb(287 90% 4% / 0.9);
+
 }
 
 [data-theme='dark'] {
-  --background-color-dark-1: #3B0847;
-  --background-color-dark-2: #4D145C;
-  --background-color-dark-3: #190D1C;
-  --background-color-dark-4: #4D145C;
-  --background-color-navbar:#290133;
+  --background-color-1: #3B0847;
+  --background-color-2: #833497;
+  --background-color-3: #5c1d42;
+  --background-color-4: #4D145C;
   --background-color: #290133;
-  --btn-color: #2E236C;
-  --project-card-bg: #C8ACD6;
+ 
+  --project-card-bg: hwb(288 0% 80% / 0.4);
+  --project-card-txt:rgb(227, 207, 232);
+  --project-card-shadow: 0 3px 6px rgba(227, 207, 232, 0.342);
+
   --text-Color: #F1E6F4;
   --text-color-navbar: #B283BE;
-  --form-text-color: #C8ACD6;
+  --form-text-color: #ffffff46;
   --footer-text-color: #C8ACD6;
+  --background-Color-navbar:hwb(288 0% 80% / 0.9);
 }
 
 
-/* App.css sau un fișier CSS global similar */
-
-/* App.css sau un fișier CSS global similar */
 
 body {
   margin: 0;
   padding: 0;
 }
 
-.animated-background {
-  position: fixed; /* Fundalul trebuie să fie fixat pe toată pagina */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1; /* Asigură-te că fundalul este sub conținutul paginii */
-  pointer-events: none; /* Asigură-te că fundalul nu interferează cu interacțiunea utilizatorului */
-}
+
 
 .home-wrapper {
-  position: relative; /* Asigură-te că elementele din `home-wrapper` sunt poziționate relativ la acesta */
-  z-index: 1; /* Asigură-te că conținutul se află deasupra fundalului animat */
+  position: relative; 
+  z-index: 1; 
 }
 

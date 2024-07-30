@@ -1,14 +1,19 @@
+/* Stiluri pentru navbar */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.6rem 7%;
-  background-color: var(--background-color-navbar);
+  padding: 0.2rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  transition: background-color 0.3s, padding 0.3s;
+}
+
+.navbar.scrolled {
+  background-color: var(--background-Color-navbar);
 }
 
 .logo-container {
@@ -21,11 +26,7 @@
   width: auto;
   opacity: 0.5;
 }
-svg
-{
-  height: 150px;
 
-}
 
 .navbar nav {
   display: flex;
@@ -34,26 +35,27 @@ svg
   flex: 1;
 }
 
-.navbar a {
+.navbar button{
+  cursor: pointer;
+  background-color: transparent;
   font-size: 1rem;
   color: var(--text-color-navbar);
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   font-weight: 700;
   text-align: center;
+  padding: 10px;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  color: var(--text-Color);
+.navbar button:hover,
+.navbar button.active {
+  color: var(--project-card-txt);
 }
 
 .theme-switch {
   display: flex;
   align-items: center;
-  font-size: 1.5rem; 
-
+  font-size: 1.5rem;
 }
-
 
 .switch-icon-container {
   display: flex;
@@ -69,18 +71,17 @@ svg
 
 .switch-icon-sun {
   color: var(--text-color-navbar);
-
   padding: 3px;
 }
 
-.tooltip{
+.tooltip {
   pointer-events: none;
   user-select: none;
   position: absolute;
   font-size: 0.6rem;
   text-align: center;
   justify-content: center;
-  transform:  translateY(60%) translateX(-15%);
+  transform: translateY(60%) translateX(-15%);
   opacity: 0;
   white-space: nowrap;
   font-weight: 700;
@@ -88,13 +89,11 @@ svg
   transition: all 0.2s ease;
 }
 
-.theme-switch:hover .tooltip{
+.theme-switch:hover .tooltip {
   opacity: 1;
   transition: all 0.5s ease;
-  transform:  translateY(150%) translateX(-15%);
+  transform: translateY(150%) translateX(-15%);
 }
-
-
 
 .hamburger {
   display: flex;
@@ -106,7 +105,6 @@ svg
   width: 25px;
   height: 3px;
   background-color: var(--text-color-navbar);
-
   margin: 5px 0;
   transition: 0.4s;
 }
@@ -123,13 +121,16 @@ svg
   transform: rotate(45deg) translate(-10px, -8.5px);
 }
 
-
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 2rem;
     justify-content: space-between;
+
+  }
+
+  .navbar.scrolled {
+    background-color: var(--background-color);
   }
 
   .logo-container {
@@ -145,18 +146,23 @@ svg
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--background-color-navbar);
     z-index: 100;
   }
+ 
 
   .navbar.show-nav nav {
     display: flex;
+    background-color: var(--background-color);
+
   }
 
-  .navbar a {
+  .navbar button {
     margin: 1rem 0;
     text-align: center;
     font-size: 1.2rem;
+    color: var(--text-Color);
+    padding: 0px;
+
   }
 
   .theme-switch {

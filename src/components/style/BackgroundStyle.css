@@ -1,29 +1,12 @@
 
-
-body[data-theme='light'] {
-  --background-color-1: var(--background-color-light-1);
-  --background-color-2: var(--background-color-light-2);
-  --background-color-3: var(--background-color-light-3);
-  --background-color-4: var(--background-color-light-4);
-  --background-color-navbar: var(--background-color-light-navbar);
-}
-
-body[data-theme='dark'] {
-  --background-color-1: var(--background-color-dark-1);
-  --background-color-2: var(--background-color-dark-2);
-  --background-color-3: var(--background-color-dark-3);
-  --background-color-4: var(--background-color-dark-4);
-  --background-color-navbar: var(--background-color-dark-navbar);
-}
-
 .animated-background {
-  height: 100vh;
-  width: 100vw;
+  height: 300vh;
+  width: 100%;
   background-color: var(--background-color); /* Culoare de fundal conform temei */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute; /* Asigură că fundalul acoperă întreaga fereastră */
+  position: absolute; 
   top: 0;
   left: 0;
   overflow: hidden;
@@ -37,4 +20,10 @@ body[data-theme='dark'] {
   opacity: 0.4; 
   filter: blur(25px); 
 }
+
+
+
+
+
+
 
