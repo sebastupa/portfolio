@@ -1,29 +1,41 @@
-
 .animated-background {
-  height: 300vh;
+  height: 500vh;
   width: 100%;
-  background-color: var(--background-color); /* Culoare de fundal conform temei */
+  background-color: var(
+    --background-color
+  ); 
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
-  z-index: 1; /* Fundalul animat are un z-index scăzut */
-
+  z-index: 1; 
 }
 
 .circle {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.4; 
-  filter: blur(25px); 
+  opacity: 0.4;
+  filter: blur(20px);
 }
 
 
+::-webkit-scrollbar {
+  width: 12px; 
+}
 
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+  filter: brightness(20%);
+}
 
+::-webkit-scrollbar-thumb {
+  background: var(--text-color-navbar); 
+  border-radius: 6px; 
+}
 
-
-
+::-webkit-scrollbar-thumb:hover {
+  background: var(--project-card-txt);
+}

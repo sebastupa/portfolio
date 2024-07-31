@@ -3,6 +3,7 @@ import './style/NavbarStyle.css';
 import { useTheme } from '../common/ThemeContext';
 import Switch from 'react-switch';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import AdminLoginModal from './AdminLoginModal';
 import Logo from '../assets/st-1.svg';
 
 const Navbar = () => {
@@ -10,6 +11,8 @@ const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const [activeButton, setActiveButton] = useState('home');
+  const [pressTimer, setPressTimer] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleNavToggle = () => {
     setNavOpen(!navOpen);
@@ -18,7 +21,7 @@ const Navbar = () => {
   const handleScroll = () => {
     setScrolling(window.scrollY > 150);
 
-    const sections = ['home', 'about', 'services', 'portfolio', 'contact'];
+    const sections = ['home', 'about', 'skills', 'portfolio', 'contact'];
     const scrollPosition = window.scrollY + window.innerHeight / 2;
 
     sections.forEach((section) => {
@@ -41,6 +44,21 @@ const Navbar = () => {
 
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleMouseDown = () => {
+    const timer = setTimeout(() => {
+      setIsModalOpen(true);
+    }, 3000);
+    setPressTimer(timer);
+  };
+
+  const handleMouseUp = () => {
+    clearTimeout(pressTimer);
+  };
+
+  const handleMouseLeave = () => {
+    clearTimeout(pressTimer);
   };
 
   const tooltipText = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
@@ -72,7 +90,14 @@ const Navbar = () => {
         <div className="tooltip">{tooltipText}</div>
       </div>
       <div className="logo-container">
-        <img src={Logo} alt="Logo" className="logo" />
+        <img
+          src={Logo}
+          alt="Logo"
+          className="logo"
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+        />
       </div>
       <div className={`hamburger ${navOpen ? 'active' : ''}`} onClick={handleNavToggle}>
         <div className="bar1"></div>
@@ -80,37 +105,38 @@ const Navbar = () => {
         <div className="bar3"></div>
       </div>
       <nav>
-        <button 
-          className={activeButton === 'home' ? 'active' : ''} 
+        <button
+          className={activeButton === 'home' ? 'active' : ''}
           onClick={() => scrollToSection('home')}
         >
           Home
         </button>
-        <button 
-          className={activeButton === 'about' ? 'active' : ''} 
+        <button
+          className={activeButton === 'about' ? 'active' : ''}
           onClick={() => scrollToSection('about')}
         >
           About
         </button>
-        <button 
-          className={activeButton === 'skills' ? 'active' : ''} 
+        <button
+          className={activeButton === 'skills' ? 'active' : ''}
           onClick={() => scrollToSection('skills')}
         >
           Skills
         </button>
-        <button 
-          className={activeButton === 'portfolio' ? 'active' : ''} 
+        <button
+          className={activeButton === 'portfolio' ? 'active' : ''}
           onClick={() => scrollToSection('portfolio')}
         >
           Portfolio
         </button>
-        <button 
-          className={activeButton === 'contact' ? 'active' : ''} 
+        <button
+          className={activeButton === 'contact' ? 'active' : ''}
           onClick={() => scrollToSection('contact')}
         >
           Contact
         </button>
       </nav>
+      <AdminLoginModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

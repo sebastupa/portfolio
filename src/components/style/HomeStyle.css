@@ -50,10 +50,9 @@
   .cv-button {
     padding: 10px 25px;
     border: 2px solid var(--text-color-navbar); 
-    background-color: transparent;
+    background-color: var(--project-card-bg);
     border-color: var(--text-color-navbar); 
     color: var(--text-color-navbar);
-    border-width: 3px;
     border-radius: 15px;
     cursor: pointer; 
     transition: background-color 0.3s; 

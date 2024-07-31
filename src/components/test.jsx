@@ -3,7 +3,7 @@ import './style/BackgroundStyle.css';
 
 const getRandomPosition = () => ({
   x: Math.random() * 200 - 100, 
-    y: Math.random() * 200 - 100  
+    y: Math.random() * 500 - 400  
 });
 
 const generateKeyframes = (index) => {
@@ -53,7 +53,7 @@ const Test = () => {
   const [styles, setStyles] = useState('');
 
   useEffect(() => {
-    setCircles(generateRandomCircles(50, setStyles)); // Limităm la 10 cercuri
+    setCircles(generateRandomCircles(50, setStyles)); 
   }, []);
 
   return (

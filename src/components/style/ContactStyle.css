@@ -1,0 +1,120 @@
+.contact-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 5%;
+  color: var(--text-Color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-input {
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-input input,
+.contact-input textarea {
+  width: 300px;
+  padding: 15px;
+}
+
+.contact-input textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-input input,
+.contact-input textarea,
+.contact-submit {
+  border: 2px solid var(--text-color-navbar);
+  background-color: var(--project-card-bg);
+  border-color: var(--text-color-navbar);
+  border-width: 2px;
+  border-radius: 15px;
+  transition: background-color, border-color 0.3s;
+  color: var(--text-Color);
+}
+
+.contact-input input::placeholder,
+.contact-input textarea::placeholder {
+  color: var(--text-color-navbar);
+}
+
+.contact-input input:focus,
+.contact-input textarea:focus {
+  border-color: var(--project-card-txt);
+}
+
+.contact-input textarea:focus::placeholder,
+.contact-input input:focus::placeholder {
+  color: var(--text-Color);
+}
+
+.contact-submit {
+  padding: 10px 25px;
+  color: var(--text-color-navbar);
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  background-color: var(--text-color-navbar);
+  color: var(--background-color);
+}
+
+.contact-input input:-webkit-autofill {
+  -webkit-text-fill-color: var(--text-Color);
+  background-color: var(--project-card-bg) !important;
+  -webkit-box-shadow: 0 0 0px 100px var(--background-color) inset;
+}
+
+textarea {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+textarea::-webkit-scrollbar {
+  width: 12px;
+  background: transparent;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .contact-input input,
+  .contact-input textarea {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-input input,
+  .contact-input textarea {
+    padding: 8px;
+  }
+}
