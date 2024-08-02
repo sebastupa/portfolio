@@ -21,11 +21,12 @@
   align-items: center;
 }
 
-.logo {
+.logo-container svg {
   height: 50px;
   width: auto;
-  opacity: 0.5;
+  fill: var(--text-color-navbar);
 }
+
 
 
 .navbar nav {
@@ -186,7 +187,7 @@
 
   .theme-switch {
     order: 3;
-    margin-left: auto; /* Move theme switch to the end */
+    margin-left: auto; 
   }
 
   .hamburger {

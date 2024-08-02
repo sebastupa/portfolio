@@ -46,8 +46,6 @@
 .contact-submit {
   border: 2px solid var(--text-color-navbar);
   background-color: var(--project-card-bg);
-  border-color: var(--text-color-navbar);
-  border-width: 2px;
   border-radius: 15px;
   transition: background-color, border-color 0.3s;
   color: var(--text-Color);

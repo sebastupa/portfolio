@@ -9,6 +9,8 @@
   font-family: 'Nunito', sans-serif;
 }
 
+
+
 :root {
   --background-color-1: #f5f6f7;
   --background-color-2: #ffcce6;
@@ -18,7 +20,7 @@
  
   --project-card-bg:hwb(287 90% 4% / 0.4);
   --project-card-txt:rgb(81, 22, 96);
-  --project-card-shadow: 0 3px 6px rgba(81, 22, 96, 0.342);
+  --project-card-shadow: 0 12px 12px rgba(81, 22, 96, 0.342);
 
   --text-Color: #270A2E;
   --text-color-navbar: #8E549D;
